@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'ClickerScript';
+    src: url('ClickerScript.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('Nunito.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(248, 241, 237);
+}
+
+#inicio {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(248, 241, 237);
+    position: relative;
+    transition: opacity 0.5s;
+}
+#inicio.sumindo {
+    opacity: 0;
+}
+
+@keyframes brilhar {
+    0%, 100% { opacity: 0.2; transform: scale(0.8);}
+    50% { opacity: 1; transform: scale(1);}
+}
+
+.estrela {
+    color: rgb(206, 186, 131);
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    animation: brilhar 2.5s ease-in-out infinite;
+}
+
+.t1 {
+    font-size: 1rem;
+}
+
+.t2 {
+    font-size: 1.5rem;
+}
+
+.t3 {
+    font-size: 2rem;
+}
+
+.estrela:nth-of-type(1)  { top: 18%; left: 10%; animation-duration: 2.2s; animation-delay: 0.4s; }
+.estrela:nth-of-type(2)  { top: 35%; left: 38%; animation-duration: 3s;   animation-delay: 0.4s; }
+.estrela:nth-of-type(3)  { top: 16%; left: 57%; animation-duration: 2.6s; animation-delay: 0.4s; }
+.estrela:nth-of-type(4)  { top: 24%; left: 88%; animation-duration: 3.4s; animation-delay: 0.3s; }
+.estrela:nth-of-type(5)  { top: 33%; left: 6%;  animation-duration: 2.4s; animation-delay: 0.4s; }
+.estrela:nth-of-type(6)  { top: 38%; left: 92%; animation-duration: 3.2s; animation-delay: 0.4s; }
+.estrela:nth-of-type(7)  { top: 47%; left: 5%;  animation-duration: 2.8s; animation-delay: 0.5s; }
+.estrela:nth-of-type(8)  { top: 52%; left: 90%; animation-duration: 3.6s; animation-delay: 0.4s; }
+.estrela:nth-of-type(9)  { top: 60%; left: 10%; animation-duration: 2.3s; animation-delay: 0.4s; }
+.estrela:nth-of-type(10) { top: 64%; left: 86%; animation-duration: 3.1s; animation-delay: 0.4s; }
+.estrela:nth-of-type(11) { top: 74%; left: 25%; animation-duration: 2.7s; animation-delay: 0.4s; }
+.estrela:nth-of-type(12) { top: 80%; left: 55%; animation-duration: 3.5s; animation-delay: 0.9s; }
+.estrela:nth-of-type(13) { top: 65%; left: 50%; animation-duration: 2.5s; animation-delay: 0.4s; }
+.estrela:nth-of-type(14) { top: 88%; left: 80%; animation-duration: 3.3s; animation-delay: 0.6s; }
+.estrela:nth-of-type(15) { top: 94%; left: 52%; animation-duration: 2.9s; animation-delay: 0.4s; }
+.estrela:nth-of-type(16) { top: 88%; left: 12%; animation-duration: 2.1s; animation-delay: 0.4s; }
+.estrela:nth-of-type(17) { top: 3%;  left: 4%;  animation-duration: 3s;   animation-delay: 0.4s; }
+.estrela:nth-of-type(18) { top: 3%;  left: 94%; animation-duration: 2.6s; animation-delay: 0.4s; }
+
+@keyframes balancar {
+    from {transform: rotate(-2deg);}
+    to {transform: rotate(2deg);}
+}
+
+.guirlanda {
+    position: absolute;
+    top: 5%;
+    width: 50vw;
+    transform-origin: top center;
+    animation: balancar 1.5s ease-in-out infinite alternate;
+}
+
+#inicio p {
+        font-family: 'Nunito', sans-serif;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        color: rgb(205, 181, 167);
+}
+
+#inicio h1 {
+    font-size: 2rem;
+    color: rgb(20, 70, 59);
+    padding-top: 8px;
+}
+
+#inicio h2 {
+    color: rgb(123, 35, 35);
+}
+
+@keyframes aparecer {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+#calendario {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: aparecer 1s both;
+}
+
+#calendario footer {
+    margin-top: auto;
+}
+
+#calendario h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(123, 35, 35);
+    font-family: 'ClickerScript', cursive, sans-serif;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px 30px ;
+    gap: 8px;
+}
+
+.grade {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.grade button{
+    aspect-ratio: 1;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (hover:hover) {
+    .grade button:hover, .card button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    #voltar:hover {
+        font-weight: bold;
+        letter-spacing: 0.1cap;
+    }
+}
+
+.grade button:active, .card button:active {
+    transform: scale(0.95);
+}
+
+.grade button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes tremer {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-6px); }
+    50%  { transform: translateX(6px); }
+    75%  { transform: translateX(-6px); }
+    100% { transform: translateX(0); }
+}
+
+.tremendo {
+    animation: tremer 0.4s;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.card {
+    color: rgb(20, 70, 59);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(248, 241, 237);
+    width: 90%;
+    max-width: 400px;
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+    min-height: 400px;
+}
+
+.card p {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card button {
+    margin-top: auto;
+    width: 5rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgb(20, 70, 59);
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.aberta {
+    opacity: 0.7;
+}
+
+.escondido {
+    display: none !important; 
+}
+
+#natal {
+    background-color: rgb(238, 231, 224);
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+}
+
+#natal img {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 130%;
+
+}
+
+#voltar {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    color: rgb(98, 37, 34);
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: 1;
+}
+
+footer {
+    background-color: rgb(123, 35, 35);
+    color: rgb(248, 241, 237);
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 5px;
+}
+
+@media (min-width: 768px) {
+    #inicio {
+        padding-top: 120px;
+    }
+    .guirlanda {
+        position: absolute;
+        top: 5%;
+        width: 15vw;
+    }
+    .grade {
+        grid-template-columns: repeat(6, 1fr);
+        max-width: 900px;
+        padding-bottom: 50px;
+    }
+    #calendario h1 {
+        font-size: 3rem;
+    }
+    #natal img {
+        height: 110%;
+    }
+    #voltar {
+        bottom: 10px;
+        right: 10px;
+        top: auto;
+        left: auto;
+        transform: none;
+    }
+}
