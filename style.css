@@ -110,7 +110,7 @@ body {
 
 #embreve {
     position: absolute;
-    top: 65%;
+    bottom: 10%;
     transform-origin: bottom center;
     z-index: 3;
     display: flex;

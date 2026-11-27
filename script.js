@@ -56,7 +56,7 @@ const texto = document.querySelector("#card-texto");
 const natal = document.querySelector("#natal");
 const voltar = document.querySelector("#voltar");
 const card = document.querySelector(".card");
-const hoje = new Date(2026, 10, 29);
+const hoje = new Date();
 const inicioAdvento = new Date(2026, 10, 30);
 
 if (hoje < inicioAdvento) {
