@@ -84,7 +84,7 @@ body {
 .guirlanda {
     position: absolute;
     top: 5%;
-    width: 50vw;
+    height: 30vh;
     transform-origin: top center;
     animation: balancar 1.5s ease-in-out infinite alternate;
 }
@@ -104,6 +104,21 @@ body {
 
 #inicio h2 {
     color: rgb(123, 35, 35);
+}
+
+#embreve {
+    position: absolute;
+    bottom: 10%;
+    transform-origin: bottom center;
+    z-index: 3;
+    display: flex;
+}
+
+#inicio #embreve p{
+    color: rgb(123, 35, 35);
+    justify-content: center;
+    align-items: center;
+    
 }
 
 @keyframes aparecer {
@@ -214,6 +229,7 @@ div {
     margin-top: 20px;
     font-size: 1.3rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(155, 131, 75);
 }
 
 .card button {
@@ -278,7 +294,7 @@ footer {
     .guirlanda {
         position: absolute;
         top: 5%;
-        width: 15vw;
+        height: 40vh;
     }
     .grade {
         grid-template-columns: repeat(6, 1fr);
