@@ -20,6 +20,8 @@ body {
 
 #inicio {
     min-height: 100vh;
+    min-height: 100dvh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,7 +110,7 @@ body {
 
 #embreve {
     position: absolute;
-    bottom: 10%;
+    top: 65%;
     transform-origin: bottom center;
     z-index: 3;
     display: flex;
@@ -128,6 +130,7 @@ body {
 
 #calendario {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     animation: aparecer 1s both;
@@ -283,6 +286,7 @@ footer {
     background-color: rgb(123, 35, 35);
     color: rgb(248, 241, 237);
     text-align: center;
+    justify-content: center;
     font-size: 0.9rem;
     padding: 5px;
 }
